@@ -1,0 +1,18 @@
+abwatson1995/assignment1:.travis.yml@bbf1e5c
+language: java
+
+git:
+  depth: 3
+  
+# safelist
+branches:
+  only:
+  - master
+  - stable
+
+script:
+  - javac SortInput.java
+  - java SortInput < input.txt
+
+notifications:
+  email: false
